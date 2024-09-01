@@ -1,6 +1,6 @@
 require('@nomiclabs/hardhat-ethers');
 require('@nomiclabs/hardhat-etherscan');
-
+require('dotenv').config();
 module.exports = {
   solidity: {
     version: "0.8.24",
@@ -15,15 +15,15 @@ module.exports = {
   networks: {
     polygonAmoy: {
       url: `https://polygon-amoy.drpc.org`,
-      accounts: [`0xadc8974cb28c93f85a0ed2f6e15957b1257fa14ae7341c24e3ac595aa4d3e0b6`]
+      accounts: [process.env.ACCOUNT_KEY]
     },
     polygonCardona: {
       url: `https://rpc.cardona.zkevm-rpc.com`,
-      accounts: [`0xadc8974cb28c93f85a0ed2f6e15957b1257fa14ae7341c24e3ac595aa4d3e0b6`]
+      accounts: [process.env.ACCOUNT_KEY]
     }
   }
   ,
   polygonscan: {
-    apiKey: "1HPB3QZN585C2ZNQVK9J9QTDE45RSXMMDH"
+    apiKey: process.env.POLYGON_SCAN_API
   }
 };
