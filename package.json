@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.22.9"
+  },
+  "dependencies": {
+    "@certusone/wormhole-sdk": "^0.10.18"
+  }
+}
